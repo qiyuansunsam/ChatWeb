@@ -3,18 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chating</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="/static/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="messaging-container">
-        <p id="newMessages"></p>
-        <div id="loading" class="loading">...</div>
-        <form id="message-form">
-            <textarea id="message" placeholder="Type your message..." required></textarea>
-            <button type="submit">Send</button>
+        <div class="chat-header">
+            <h2><span class="material-icons">chat</span> AI Assistant</h2>
+            <a href="/logout" class="logout-btn">
+                <span class="material-icons">logout</span> Logout
+            </a>
+        </div>
+        
+        <div id="newMessages" class="messages-area"></div>
+
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <span>AI is thinking...</span>
+        </div>
+
+        <form id="message-form" class="message-input-form">
+            <div class="input-container">
+                <textarea id="message" placeholder="Type your message..." required rows="1"></textarea>
+                <button type="submit" class="send-btn">
+                    <span class="material-icons">send</span>
+                </button>
+            </div>
         </form>
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="/static/main.js"></script>
 </body>
 </html>

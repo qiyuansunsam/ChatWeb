@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - AI Chat</title>
     <link rel="stylesheet" href="/static/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
+        <div class="login-header">
+            <span class="material-icons">smart_toy</span>
+            <h1>AI Chat Assistant</h1>
+            <p>Sign in to start chatting</p>
+        </div>
         <form id="login-form">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <div class="input-group">
+                <span class="material-icons">person</span>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <span class="material-icons">lock</span>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-btn">
+                <span class="material-icons">login</span>
+                Sign In
+            </button>
         </form>
     </div>
     <script src="/static/main.js"></script>
